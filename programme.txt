@@ -1,0 +1,13 @@
+INTEGER ROUTINE fnc (a,b) INTEGER f1,ff3;CHARACTER cf1; fnc = "cc" ENDR
+LOGICAL ROUTINE fnc1 (c,d) INTEGER f1,ff3;CHARACTER cf1;LOGICAL f1; fncx = 34 ENDR
+PROGRAM rouchedi ;
+INTEGER pcwe,Sa3id,anaEntier;
+CHARACTER MAT DIMENSION (9*87),CDs;
+LOGICAL dd;
+REEL floatation;
+INTEGER dd,MAT;
+LOGICAL f1;
+f1= 13;
+dd = 13;
+fghtr = 32;
+END

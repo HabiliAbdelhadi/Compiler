@@ -1,0 +1,8 @@
+implement yylval et %union{}--------------------------------------------------done
++ update les token as such :--------------------------------------------------????
+        %token <str>IDF <entier>CST
+ts ++ taille ? syntaxique 
+maj ts a l'etp syntaxique ??
+maj ts des idf : {init ? val=1 : val=0} and maj type {dec ? type="type" : type=" "}
+fix CONDITION and work on EXPRESSION
+
