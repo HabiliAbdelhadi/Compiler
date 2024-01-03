@@ -917,7 +917,7 @@ YY_RULE_SETUP
 {if(atoi(yytext)>=0 && atoi(yytext)<32768)  //0 <-> 32768 the '-' will be treated as an arethmetic expression
             printf("%s",yytext);
         else printf("Warning ,la ligne %d ,la colonne %d :entier %s depasse la limite! \n",yylineno,coll,yytext);
-        addelement(yytext,"CST","INTEGER",atoi(yytext),"\0");coll+= strlen(yytext);return(cst_entier);}
+        addelement(yytext,"CST","INTEGER",atoi(yytext),"\0");coll+= strlen(yytext);yylval.e=atoi(yytext);return(cst_entier);}
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
@@ -936,7 +936,7 @@ int decimalValue = atoi(decimalPart + 1);
         printf("Warning, ligne %d, colonne %d : partie décimale du réel %s dépasse la limite!\n", yylineno, coll, yytext);}}
             else {printf("REEL %s\n", yytext);coll += strlen(yytext);}} 
                 else {printf("Warning, ligne %d, colonne %d : partie entière du réel %s dépasse la limite!\n", yylineno, coll, yytext);}
-                addelement(yytext,"CST","INTEGER",atof(yytext),"\0");return(cst_reel);}
+                addelement(yytext,"CST","INTEGER",atof(yytext),"\0");yylval.f=atof(yytext);return(cst_reel);}
 	YY_BREAK
 case 34:
 YY_RULE_SETUP

@@ -1,13 +1,28 @@
-INTEGER ROUTINE fnc (a,b) INTEGER f1,ff3;CHARACTER cf1; fnc = "cc" ENDR
-LOGICAL ROUTINE fnc1 (c,d) INTEGER f1,ff3;CHARACTER cf1;LOGICAL f1; fncx = 34 ENDR
-PROGRAM rouchedi ;
-INTEGER pcwe,Sa3id,anaEntier;
-CHARACTER MAT DIMENSION (9*87),CDs;
-LOGICAL dd;
-REEL floatation;
-INTEGER dd,MAT;
-LOGICAL f1;
-f1= 13;
-dd = 13;
-fghtr = 32;
+INTEGER ROUTINE fnc1 (a) INTEGER f1a,f1b;CHARACTER cf1; fnc1 = "cc" ENDR                         %example fonction;
+LOGICAL ROUTINE fnc2 (c,d) INTEGER f2a,f2b;CHARACTER cf1;LOGICAL f1a;f1a=TRUE; fnc2 = 34 ENDR   %example fonction avec remarquez la variable f1a (elle existe dans fnc1 et fnc2);
+INTEGER ROUTINE fnc (a) INTEGER fa; fnc = "cc" ENDR     %la taille de l'idf fnc dans la TS represente le nombre de parametres de la fnc  ;      
+INTEGER ROUTINE fnc3 (a) INTEGER f1a; fnc5 = "cc" ENDR  %example mauvais return;
+PROGRAM PgmPrincipal ;
+INTEGER a,b,c;                  %declarations;
+INTEGER TAB DIMENSION (9);
+CHARACTER MAT DIMENSION (9*87),CD;
+LOGICAL v;
+LOGICAL a;  %decalaration double;
+
+a = CALL fnc1 (d) ;        %le call verifie le type de retour et le nombre de parametre;
+MAT (2*15) = CALL fnc1 (CDss,CDs) ;
+EQUIVALENCE(a,b),(c,z);   %z non declarre;
+        %example afectation ;
+a= 13;
+a = TRUE;
+a = CD ;
+b = -26*26+36/98*2+2*a;
+z=b;
+v = TRUE.OR.(a.GT.c);
+%example de if et de boucle ;
+IF (TRUE.AND.(a.EQ.b)) THEN c=6; ENDIF
+IF (TRUE.AND.(a.EQ.b)) THEN c=6; ELSE c=0; ENDIF
+DOWHILE (FALSE) THEN IF (TRUE.AND.(a.EQ.b)) THEN c=6; ELSE c=0; ENDIF ENDDO
+WRITE ( a,b,"hello");
+
 END
